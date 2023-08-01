@@ -113,6 +113,17 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            TextButton(
+              style: ButtonStyle(
+                foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+              ),
+              onPressed: () {
+                setState(() {
+                  _counter = 0;
+                });
+              },
+              child: const Text('Reset'),
+            ),
           ],
         ),
       ),
