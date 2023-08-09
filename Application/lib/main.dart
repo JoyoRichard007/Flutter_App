@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text(info),
         ),
-        body: ButtonBar(child: Text('valider')),
+        body: Button(child: Text('valider')),
       ),
     );
   }
