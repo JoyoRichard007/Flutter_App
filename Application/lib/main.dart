@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:premier_app/screens/Home.dart';
+import 'package:premier_app/screens/guest/Auth.dart';
 
 void main() {
   runApp(App());
@@ -12,7 +13,8 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      title: 'flutter',
+      home: Authscreen(),
     );
   }
 }
