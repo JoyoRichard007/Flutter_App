@@ -59,7 +59,8 @@ class _PasswordScreenState extends State<PasswordScreen> {
                                 obscureText: _isSecret,
                                 decoration: InputDecoration(
                                     suffixIcon: InkWell(
-                                      onTap: () => print("Change"),
+                                      onTap: () => setState(
+                                          () => _isSecret = !_isSecret),
                                       child: Icon(!_isSecret
                                           ? Icons.visibility
                                           : Icons.visibility_off),
