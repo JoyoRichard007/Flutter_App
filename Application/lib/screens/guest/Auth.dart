@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 
 class Authscreen extends StatefulWidget {
@@ -13,10 +14,12 @@ class _AuthscreenState extends State<Authscreen> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          // ignore: prefer_const_constructors
           title: Text("Page d'accueil"),
         ),
         body: Center(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               RichText(
                   text: TextSpan(
@@ -33,18 +36,44 @@ class _AuthscreenState extends State<Authscreen> {
                         color: Theme.of(context).primaryColor,
                       )),
                   TextSpan(
-                    text: ' d\'accueil'.toUpperCase(),
+                    text: 'd\'accueil'.toUpperCase(),
                   )
                 ],
               )),
-              // Text("Bienvenue sur\n la page d'accueil"),
+              // ignore: prefer_const_constructors
               Text(
                 "Ceci est pour vous",
+                style: TextStyle(
+                  fontStyle: FontStyle.italic,
+                ),
               ),
+              // ignore: prefer_const_constructors
               SizedBox(
                 height: 50.0,
               ),
-              Text("Entrez votre adresse mail"),
+              // ignore: prefer_const_constructors
+
+              Form(
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                    Text("Entrez votre adresse mail"),
+                    SizedBox(height: 10.0),
+                    TextFormField(
+                      decoration: InputDecoration(
+                          hintText: "Ex: joyop20.aps2b@gmail.com",
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(0.0),
+                            borderSide: BorderSide(color: Colors.grey),
+                          )),
+                    ),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    ElevatedButton(
+                        onPressed: () => print("Envoyer"),
+                        child: Text('Continuer'.toUpperCase()))
+                  ]))
             ],
           ),
         ),
