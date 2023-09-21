@@ -18,6 +18,10 @@ class _AuthscreenState extends State<Authscreen> {
           title: Text("Page d'accueil"),
         ),
         body: Center(
+            child: SingleChildScrollView(
+          padding: EdgeInsets.symmetric(
+            horizontal: 30.0,
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -76,7 +80,7 @@ class _AuthscreenState extends State<Authscreen> {
                   ]))
             ],
           ),
-        ),
+        )),
       ),
     );
   }
