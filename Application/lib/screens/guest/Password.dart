@@ -65,7 +65,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
                                           ? Icons.visibility
                                           : Icons.visibility_off),
                                     ),
-                                    hintText: "Ex: df!JGH**UJkl7",
+                                    hintText: "Ex: df!JGH**UJkal7",
                                     border: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(0.0),
                                       borderSide:
