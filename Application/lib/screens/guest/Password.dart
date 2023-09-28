@@ -76,7 +76,6 @@ class _PasswordScreenState extends State<PasswordScreen> {
                                 height: 10.0,
                               ),
                               ElevatedButton(
-                                  // ignore: avoid_print
                                   onPressed: () => print("Envoyer"),
                                   child: Text('Continuer'.toUpperCase()))
                             ]))
