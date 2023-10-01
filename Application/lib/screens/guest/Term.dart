@@ -17,7 +17,7 @@ class _TermScreenState extends State<TermScreen> {
           elevation: 0,
           backgroundColor: Theme.of(context).scaffoldBackgroundColor,
           title: Text(
-            "Terms & Conditions",
+            "Terms & Conditions ",
             style: TextStyle(color: Colors.black),
           ),
           leading: IconButton(

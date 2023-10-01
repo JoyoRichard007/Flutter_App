@@ -72,6 +72,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
                                           BorderSide(color: Colors.grey),
                                     )),
                               ),
+                              // ignore: prefer_const_constructors
                               SizedBox(
                                 height: 10.0,
                               ),
