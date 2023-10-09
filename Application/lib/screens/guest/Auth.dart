@@ -9,6 +9,8 @@ class Authscreen extends StatefulWidget {
 }
 
 class _AuthscreenState extends State<Authscreen> {
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -58,26 +60,28 @@ class _AuthscreenState extends State<Authscreen> {
               // ignore: prefer_const_constructors
 
               Form(
+                  key: _formKey,
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                    Text("Entrez votre adresse mail"),
-                    SizedBox(height: 10.0),
-                    TextFormField(
-                      decoration: InputDecoration(
-                          hintText: "Ex: joyop20.aps2b@gmail.com",
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(0.0),
-                            borderSide: BorderSide(color: Colors.grey),
-                          )),
-                    ),
-                    SizedBox(
-                      height: 10.0,
-                    ),
-                    ElevatedButton(
-                        onPressed: () => print("Envoyer"),
-                        child: Text('Continuer'.toUpperCase()))
-                  ]))
+                        Text("Entrez votre adresse mail"),
+                        SizedBox(height: 10.0),
+                        TextFormField(
+                          // onChanged: (value) => setState(() => _email = value),
+                          decoration: InputDecoration(
+                              hintText: "Ex: joyop20.aps2b@gmail.com",
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(0.0),
+                                borderSide: BorderSide(color: Colors.grey),
+                              )),
+                        ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        ElevatedButton(
+                            onPressed: () => print("Envoyer"),
+                            child: Text('Continuer'.toUpperCase()))
+                      ]))
             ],
           ),
         )),
