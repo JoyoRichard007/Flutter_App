@@ -49,6 +49,7 @@ class _AuthscreenState extends State<Authscreen> {
               // ignore: prefer_const_constructors
               Text(
                 "Ceci est pour vous",
+                // ignore: prefer_const_constructors
                 style: TextStyle(
                   fontStyle: FontStyle.italic,
                 ),
