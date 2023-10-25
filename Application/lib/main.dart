@@ -3,6 +3,7 @@ import 'package:premier_app/screens/Home.dart';
 import 'package:premier_app/screens/guest/Auth.dart';
 import 'package:premier_app/screens/guest/Password.dart';
 import 'package:premier_app/screens/guest/Term.dart';
+import 'package:premier_app/screens/guest/calendar.dart';
 
 void main() {
   runApp(App());
@@ -16,7 +17,10 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'flutter',
-      home: Authscreen(),
+      theme: ThemeData(
+        primarySwatch: Colors.yellow,
+      ),
+      home: CalendarEvent(),
     );
   }
 }
